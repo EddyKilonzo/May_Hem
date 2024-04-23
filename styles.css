@@ -1,0 +1,97 @@
+:root{
+    --primary-color: #06283D;
+    --secondary-color: #256D85;
+    --links:#47B5FF;
+    --card-bg:#DFF6FF;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+    color: white;
+}
+#home .container {
+    background-image: url(assets/images/hanna.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+}
+.background-overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+    z-index: 1; 
+}
+.container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container nav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Allows links to stack above background */
+    z-index: 2;
+    list-style: none;
+    text-decoration: no;
+    color: white;
+    
+}
+.container nav .nav-links,  /* Targets the main navigation element */
+.container nav .nav-links a  /* Targets the links within the navigation */
+{
+  /* Shared styles from both rules */
+  
+  text-decoration: none;  /* This line removes the underline from links */
+  
+}
+.container nav .nav-links a li{
+    color: var(--primary-color);
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+    
+}
+.container nav .nav-links a li:hover {
+    color: var(--links);
+    transform: scale(1.1);
+}
+.nav-link:target { /* Styles for the active link (targeted with hash) */
+    font-weight: bold; /* Example: Make active link bold */
+    color: var(--links); /* Example: Change color */
+  }
+.container nav .nav-links li {
+    padding: 10px;
+    margin: 10px;
+}
+.container  .nav-links a i {  /* Assuming Font Awesome classes */
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+    color: var(--primary-color);
+    transition: transform 0.2s ease-in-out;  /* Add hover effect transition */
+  }
+  
+  .container  .nav-links  a i:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);  /* Increase icon size slightly on hover */
+  }
+
+nav img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
